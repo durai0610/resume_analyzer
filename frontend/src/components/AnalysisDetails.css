@@ -1,0 +1,67 @@
+/* frontend/src/components/AnalysisDetails.css */
+
+/* This is the general style for all main section headings, including "Skills" */
+.analysis-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #007bff;
+  border-bottom: 2px solid #007bff; /* The blue line below the heading */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* This container uses Flexbox to align the two skills columns */
+.skills-section {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Styles for the "Technical Skills" and "Soft Skills" containers */
+.skills-section > div {
+  flex: 1; /* Each column takes up equal space */
+  min-width: 300px; /* Minimum width before wrapping */
+  background-color: #f0f8ff; /* Light blue background for the box */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Style for the subheadings like "Technical Skills" */
+.skills-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0056b3;
+  border-bottom: 1px solid #cceeff; /* A light blue line below the subheading */
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+/* Style for the skill list items */
+.skills-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.skills-section li {
+  padding: 5px 0;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column; /* Stacks the columns vertically */
+    gap: 15px;
+  }
+  .skills-section > div {
+    min-width: unset;
+    width: 100%;
+  }
+}
