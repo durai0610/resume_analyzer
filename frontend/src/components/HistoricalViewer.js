@@ -36,7 +36,15 @@ const HistoricalViewer = ({ onSelectResume }) => {
     }
   };
 
-  if (isLoading) return <p>Loading past resumes...</p>;
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Loading past resumes...</p>
+      </div>
+    );
+  }
+  
   if (error) return <p className="error-message">{error}</p>;
 
   return (
