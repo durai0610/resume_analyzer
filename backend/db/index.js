@@ -7,10 +7,7 @@ const pool = new Pool({
   database: config.db.database,
   password: config.db.password,
   port: config.db.port,
-  // Add SSL for Render deployment (uncomment the lines below)
-  // ssl: {
-  //   rejectUnauthorized: false
-  // }
+  ssl: true
 });
 
 // A function to handle queries to the database
