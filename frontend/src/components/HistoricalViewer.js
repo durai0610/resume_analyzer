@@ -57,12 +57,12 @@ const HistoricalViewer = ({ onSelectResume }) => {
           <tbody>
             {resumes.map((resume) => (
               <tr key={resume.id}>
-                <td>{resume.file_name}</td>
-                <td>{resume.name || 'N/A'}</td>
-                <td>{resume.email || 'N/A'}</td>
-                <td>{resume.resume_rating ? `${resume.resume_rating}/10` : 'N/A'}</td>
-                <td>{new Date(resume.uploaded_at).toLocaleDateString()}</td>
-                <td>
+                <td data-label="File Name">{resume.file_name}</td>
+                <td data-label="Name">{resume.name || 'N/A'}</td>
+                <td data-label="Email">{resume.email || 'N/A'}</td>
+                <td data-label="Rating">{resume.resume_rating ? `${resume.resume_rating}/10` : 'N/A'}</td>
+                <td data-label="Uploaded At">{new Date(resume.uploaded_at).toLocaleDateString()}</td>
+                <td data-label="Actions">
                   <button onClick={() => handleDetailsClick(resume.id)} className="details-button">
                     View Analysis
                   </button>
